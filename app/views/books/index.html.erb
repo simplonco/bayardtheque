@@ -1,0 +1,21 @@
+<div class="container rotate">
+  <h1>Ma collection</h1>
+  <br>
+
+  <% @books.each do |book| %>
+
+<div class="well">
+<div class="media">
+  <a class="pull-left" href="#">
+    <%= image_tag book.image, class: 'media-book' %>
+  </a>
+  <div class="media-body">
+    <h3 class="media-heading"><%= book.title.capitalize %>  <span class="label label-primary"><%= book.author.titleize %></span></h4>
+    <p class="media-note"><%= book.note %></p>
+  </div>
+</div>
+</div>
+
+  <% end %>
+  <br>
+</div>
